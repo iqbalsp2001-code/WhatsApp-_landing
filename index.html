@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WhatsApp Style Landing Page</title>
+<style>
+  * {margin:0; padding:0; box-sizing:border-box;}
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #ece5dd;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* HEADER */
+  .header {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    background-color: #075E54;
+    color: white;
+    padding: 10px;
+  }
+  .header img.profile-pic {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  .name-status {
+    flex-grow: 1;
+  }
+  .name-status strong {
+    display: block;
+  }
+  .name-status small {
+    color: #25D366;
+  }
+  .header-icons img {
+    width: 22px;
+    height: 22px;
+    margin-left: 15px;
+    cursor: pointer;
+  }
+
+  /* BODY */
+  .chat-body {
+    flex: 1;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp_background.png');
+    background-size: cover;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+  }
+  .chat-img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.6s forwards;
+    animation-delay: 0.3s;
+  }
+  .message {
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 80%;
+    font-size: 14px;
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  .incoming {align-self: flex-start;}
+  .outgoing {
+    background: #dcf8c6;
+    align-self: flex-end;
+  }
+
+  /* FOOTER */
+  .footer {
+    flex-shrink: 0;
+    background: white;
+    padding: 15px;
+    text-align: center;
+  }
+  .footer p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .btn-next {
+    display: inline-block;
+    background: #007BFF;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    text-decoration: none;
+  }
+  .btn-next:hover {
+    background: #0069d9;
+  }
+
+  /* Animasi */
+  @keyframes fadeIn {
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <img src="https://photos.app.goo.gl/b1S6GaeE3LoTjE9p7" alt="Profile" class="profile-pic" id="profile-pic">
+  <div class="name-status">
+    <strong id="profile-name">Nama Kamu</strong>
+    <small>online...</small>
+  </div>
+  <div class="header-icons">
+    <img src="https://img.icons8.com/ios-glyphs/30/ffffff/video-call.png" alt="Video Call">
+    <img src="https://img.icons8.com/ios-glyphs/30/ffffff/phone.png" alt="Call">
+  </div>
+</div>
+
+<!-- BODY -->
+<div class="chat-body">
+  <img src="https://photos.app.goo.gl/b1S6GaeE3LoTjE9p7" alt="Foto Chat" class="chat-img" id="chat-image">
+  <div class="message incoming" style="animation: fadeIn 0.6s forwards; animation-delay: 0.8s;">Halo, selamat datang di halaman saya 👋</div>
+  <div class="message outgoing" style="animation: fadeIn 0.6s forwards; animation-delay: 1.6s;">Hai! Saya ingin tahu lebih banyak.</div>
+  <div class="message incoming" style="animation: fadeIn 0.6s forwards; animation-delay: 2.4s;">Klik tombol di bawah untuk melanjutkan.</div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <p id="footer-text">Untuk melanjutkan, klik tombol di bawah ini.</p>
+  <a href="https://merpati.gurufavorit.com/2025/08/title-why-your-business-plan-isnt.html" class="btn-next" id="next-link">LANJUTKAN</a>
+</div>
+
+</body>
+</html>
